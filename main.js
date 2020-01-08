@@ -297,7 +297,7 @@ class App {
   }
 
   _onNavigateHome() {
-    document.title = 'Vanilla Protocol Viewer';
+    document.title = 'WebKit Protocol Viewer';
     this._search.setDefaultValue('');
     this._search.cancelSearch();
     this._contentElement.innerHTML = '';
