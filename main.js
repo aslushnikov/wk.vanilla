@@ -2,38 +2,7 @@ import {ProtocolRenderer} from './protocol_renderer.js';
 import {Search} from './search.js';
 
 let PROTOCOLS = [
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Animation.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/ApplicationCache.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Audit.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Browser.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/CPUProfiler.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/CSS.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Canvas.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Console.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/DOM.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/DOMDebugger.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/DOMStorage.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Database.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Debugger.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Dialog.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Emulation.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/GenericTypes.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Heap.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/IndexedDB.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Input.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Inspector.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/LayerTree.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Memory.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Network.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Page.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Recording.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Runtime.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/ScriptProfiler.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Security.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/ServiceWorker.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Target.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Timeline.json",
-  "https://cdn.jsdelivr.net/gh/aslushnikov/webkit@playwright-build/Source/JavaScriptCore/inspector/protocol/Worker.json"
+  'https://cdn.jsdelivr.net/gh/aslushnikov/devops.aslushnikov.com@browser-protocols-data/webkit_protocol.json',
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -250,7 +219,7 @@ class App {
 
     this._allDomains.clear();
 
-    let protocol = App._normalizeProtocol({domains: [].concat(...protocols.map(p => [p]))});
+    let protocol = App._normalizeProtocol({domains: [].concat(...protocols.map(p => p))});
 
     for (let domain of protocol.domains) {
       this._allDomains.set(domain.domain, domain);
