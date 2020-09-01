@@ -2,7 +2,7 @@ import {ProtocolRenderer} from './protocol_renderer.js';
 import {Search} from './search.js';
 
 let PROTOCOLS = [
-  'https://cdn.jsdelivr.net/gh/aslushnikov/devops.aslushnikov.com@browser-protocols-data/webkit_protocol.json',
+  'https://raw.githubusercontent.com/aslushnikov/devops.aslushnikov.com/datastore--publish-browser-protocols/webkit_protocol.json',
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
